@@ -1,0 +1,9 @@
+Bag-Software-Agent: bagit.py v1.7.0 <https://github.com/LibraryOfCongress/bagit-python>
+Bagging-Date: 2020-12-15
+Collected-Date: 2020-12-14
+Contact-Email: morskyjezek@gmail.com
+Contact-Name: Jesse Johnston
+External-Description: NEH Grant data files downloaded from NEH in December 2020.
+Payload-Oxum: 80590263.24
+Source-Organization: National Endowment for the Humanities (NEH)
+Source-URL: https://securegrants.neh.gov/open/data/
