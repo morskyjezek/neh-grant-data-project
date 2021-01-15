@@ -25,11 +25,12 @@ visualizations.
 
 #### 02a. Cleaning
 
-Pulling the flattened data from CSVs and then reforming it into python data objects for export.
+Pulling the flattened data from CSVs, checking quality, and then transforming 
+using python data objects for export into other formats like JSON.
 
 #### 02b. Transforming
 
-Creating a list of geojson points for displaying on a map. 
+Creating a list of coordinate points for displaying on a map. 
 
 #### 02c. Exporting
 
@@ -40,7 +41,7 @@ Export the data as well-formed geojson.
 Use the cleaned data to create geospatial visualizations of 
 the grants over time. 
 
-#### 03a. Mapping with static maps by state 
+#### 03a. Mapping state by state 
 
 This notebook walks through a process to geolocate the grants state-by-state.
 The notebook offers tools to filter the data to create different kinds of maps,
