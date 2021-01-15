@@ -31,6 +31,10 @@ Pulling the flattened data from CSVs and then reforming it into python data obje
 
 Creating a list of geojson points for displaying on a map. 
 
+#### 02c. Exporting
+
+Export the data as well-formed geojson.
+
 ### 03. Mapping the data
 
 Using the cleaned data, this notebook walks through a process to
