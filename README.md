@@ -37,8 +37,19 @@ Export the data as well-formed geojson.
 
 ### 03. Mapping the data
 
-Using the cleaned data, this notebook walks through a process to
-geolocate the grants.
+Use the cleaned data to create geospatial visualizations of 
+the grants over time. 
+
+#### 03a. Mapping with static maps by state 
+
+This notebook walks through a process to geolocate the grants state-by-state.
+The notebook offers tools to filter the data to create different kinds of maps,
+and to export maps to files that can be reused in reports.
+
+#### 03b. Mapping dynamically for the web
+
+This notebook walks through a process to geolocate the grants in an
+interactive interface that is browsable via the web.
 
 ### 04. Loading in to cloud provider
 
