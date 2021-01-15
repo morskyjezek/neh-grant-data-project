@@ -19,20 +19,34 @@ for each of the original data files.
 
 ### 02. Cleaning and transforming the data
 
-The 02 notebook illustrates steps to clean, combine, and transform
+The 02 notebook illustrates steps to clean and transform
 the data so that it can be use for further tasks, including
 visualizations. 
+
+#### 02a. Cleaning
+
+Pulling the flattened data from CSVs and then reforming it into python data objects for export.
+
+#### 02b. Transforming
+
+Creating a list of geojson points for displaying on a map. 
 
 ### 03. Mapping the data
 
 Using the cleaned data, this notebook walks through a process to
 geolocate the grants.
 
-### 04. Upload to AWS
+### 04. Loading in to cloud provider
 
-How to upload the dataset to AWS (DynamoDB or S3, or both?).
+Notebook illustrate loading data into AWS.
 
-### 05. Mapping and analyzing the data
+#### 04a. Loading JSON into DynamoDB 
+
+Use a notebook to create a table & load in records.
+
+#### 04b. Loading the archive into S3
+
+Also demo in notebook.
 
 ### 06. Create a twitter broadcaster to share the information
 
