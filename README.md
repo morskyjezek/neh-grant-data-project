@@ -41,11 +41,16 @@ discussed in this repository does reproduce the basic NEH data
 ### 01. Inventory and metadata
 
 The first notebook ([01-inventory-and-fixity.ipynb](01-inventory-and-fixity.ipynb)) demonstrates how the files were inventoried and 
-basic metadata was created. Basic metadata included provenance and 
-description (see the `neh-grants-data-2020/bag-info.txt` file), 
+basic metadata was created. I originally included "fixity" in the title, since 
+one of the key metadata that the we add is fixity information in the form of 
+cryptographic hashes calculated for each file to provide baseline
+information to demonstrate whether any file has changed over time.
+The "bagged" files can be viewed in the `neh-grants-data-202012` directory.
+Basic metadata included provenance and description 
+(see the `neh-grants-data-2020/bag-info.txt` file), 
 as well as an inventory and fixity information (see 
 the `neh-grants-data-2020/manifest-sha256.txt` file)
-for each of the original data files. The "bagged" files can be viewed in the `neh-grants-data-202012` directory. 
+for each of the original data files.  
 
 ### 02. Cleaning and transforming the data
 
