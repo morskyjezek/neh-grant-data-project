@@ -40,7 +40,7 @@ discussed in this repository does reproduce the basic NEH data
 
 ### 01. Inventory and metadata
 
-The first notebook ([01-inventory-and-fixity.ipynb](/blob/main/01-inventory-and-fixity.ipynb)) demonstrates how the files were inventoried and 
+The first notebook ([01-inventory-and-fixity.ipynb](01-inventory-and-fixity.ipynb)) demonstrates how the files were inventoried and 
 basic metadata was created. Basic metadata included provenance and 
 description (see the `neh-grants-data-2020/bag-info.txt` file), 
 as well as an inventory and fixity information (see 
