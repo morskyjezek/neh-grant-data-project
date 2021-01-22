@@ -82,10 +82,18 @@ This notebook walks through a process to geolocate the grants state-by-state.
 The notebook offers tools to filter the data to create different kinds of maps,
 and to export maps to files that can be reused in reports.
 
-#### 03b. Mapping dynamically for the web
+#### 03b. An interactive US map
+
+Create a map that shows grants across the country and allows the user to 
+click &/or hover over each state to see how many grants & funds went to that state.
+This would be a proof-of-concept for extension to view by congressional districts. 
+
+#### 03c. Mapping for the web
 
 This notebook walks through a process to geolocate the grants in an
 interactive interface that is browsable via the web.
+
+TODO
 
 ### 04. Loading in to cloud provider
 
