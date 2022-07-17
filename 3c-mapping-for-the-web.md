@@ -27,7 +27,7 @@ Because the html and css elements of this step are the shortest, we will go thro
 
 ### HTML
 
-describe [`basic-map-neh-1960s-leaflet.html`](/grant-mapping-for-the-web/basic-map-neh-1960s-leaflet.html)
+describe [`basic-map-neh-1960s-leaflet.html`](grant-mapping-for-the-web/basic-map-neh-1960s-leaflet.html)
 
 ```html
 <!DOCTYPE html>
