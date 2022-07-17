@@ -82,7 +82,7 @@ This notebook walks through a process to geolocate the grants state-by-state.
 The notebook offers tools to filter the data to create different kinds of maps,
 and to export maps to files that can be reused in reports.
 
-#### 03b. An interactive US map
+#### 03b. An interactive US state map
 
 Create a map that shows grants across the country and allows the user to 
 click &/or hover over each state to see how many grants & funds went to that state.
