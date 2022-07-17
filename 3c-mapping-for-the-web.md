@@ -149,6 +149,8 @@ To use this service on your own, you will need to create a Mapbox account and a 
 The account and token will allow you to use the free services from Mapbox, including things like
 custom base layers and other styling options. 
 
+![Screenshot image of how the map of the 1960s NEH grant data will look with the light basemap style provided by Mapbox](/grant-mapping-for-web/basic-map-neh-1960s-leaflet-alternate-basemap.png "Screenshot image of how the map of the 1960s NEH grant data will look with the light basemap style provided by Mapbox")
+
 ## Resources
 
 * [Leaflet.js documentation](https://leafletjs.com/reference.html)
