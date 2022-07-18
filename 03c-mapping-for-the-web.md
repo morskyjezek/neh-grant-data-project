@@ -1,6 +1,6 @@
 # 3c. Mapping for the web / interactive maps
 
-The previous notebooks walked through the process of using the gejson data to create
+The previous episodes walked through the process of using the geojson data to create
 geospatial visualizations by mapping points on geoshapes. 
 This notebooks moves on to create interactive, web-friendly maps, like Google Maps, that are 
 likely more familiar to everyday users. 
@@ -9,25 +9,25 @@ repositioning, and the option to click on each point to get information about th
 
 ## Mapping the geojson
 
-One way to do this is to use the leaflet.js javascript library, which will knit together the map tiles
-and the grant data. The map created will exist outside of this
-notebook, but the notebook will walk through the steps to create the interactive map. 
+Rather than building the map from scratch (as previously), this demonstration uses widely used, open, and pre-existing code libraries to generate the map with the desired features. The primary tool is [Leaflet.js](https://leafletjs.com/), a javascript library that will knit together the map tiles and the grant data.
 
-Leaflet is a library of tools, written in javascript, that help display geospatial information
-via web browsers. We will use regular approaches to web publishing to create, display, and share
-the map. These elements that power the map will include: 
+Leaflet provides a library of tools, written in javascript, that help to display geospatial information via a web browser. By combining this library, which builds on common frameworks and code approaches to web publishing, with the geospatial grant data, we can create, display, and share the map. The elements that power the map include:
 
 * an HTML file that will pull in leaflet and create the basic page framework for the map
 * a CSS file to style and modify the display of the map
 * a javascript file that will use the leaflet tools to extract and load the geojson data 
 
-The process is outlined in a clear and approachable way by Kim Pham in "Web Mapping with Python and Leaflet," _Programming Historian_ 6 (2017), [doi:10.46430/phen0070](https://doi.org/10.46430/phen0070). This tutorial starts by setting up all of the map elements in one file (with a different dataset), then splits them out into three files as below. If you want to see how this would look in one file, refer to the above tutorial.
+A similar process is outlined in a clear and approachable way by Kim Pham in "Web Mapping with Python and Leaflet," _Programming Historian_ 6 (2017), [doi:10.46430/phen0070](https://doi.org/10.46430/phen0070). This tutorial starts by setting up all of the map elements in one file (with a different dataset), then splits them out into three files as below. If you want to see how this would look in one file, refer to the above tutorial.
 
 Because the html and css elements of this step are the shortest, we will go through those first. Below is a walkthrough description of each file. 
 
 ### HTML
 
-describe [`basic-map-neh-1960s-leaflet.html`](https://github.com/morskyjezek/neh-grant-data-project/blob/main/grant-mapping-for-web/basic-map-neh-1960s-leaflet.html)
+The first file is an html file [`basic-map-neh-1960s-leaflet.html`](https://github.com/morskyjezek/neh-grant-data-project/blob/main/grant-mapping-for-web/basic-map-neh-1960s-leaflet.html). In the `<head>` section, this file calls the necessary javascript and css files that are required for operating the Leaflet library. The header also pulls in a custom css file for our map (see the next file walkthrough).
+
+In the `<body>` section, the html includes only one empty div with an id="map" attribute. This tag is all that we need to provide the page information that leaflet can hook the full map on.
+
+Finally, just before the closing `</html>` tag, the file references the javascript file that we will use to create the map (see the subsequent file walkthrough).
 
 ```html
 <!DOCTYPE html>
@@ -50,7 +50,7 @@ describe [`basic-map-neh-1960s-leaflet.html`](https://github.com/morskyjezek/neh
 
 ### CSS 
 
-describe [`basic-map-neh-1960s-leaflet.css`](https://github.com/morskyjezek/neh-grant-data-project/blob/main/grant-mapping-for-web/basic-map-neh-1960s-leaflet.css)
+Next is a short css file [`basic-map-neh-1960s-leaflet.css`](https://github.com/morskyjezek/neh-grant-data-project/blob/main/grant-mapping-for-web/basic-map-neh-1960s-leaflet.css). This file provides styling information to the browser about how to display the map. Most important is the information for the map id (`<div id="map"></div>` in the html file), which provides instructions to the browser about where to display the leaflet map.
 
 ```css
 body { 
@@ -68,7 +68,17 @@ body {
 
 ### Javascript for leaflet
 
-describe [`basic-map-neh-1960s-leaflet.js`](https://github.com/morskyjezek/neh-grant-data-project/blob/main/grant-mapping-for-web/basic-map-neh-1960s-leaflet.js)
+The file that pulls this all together is the javascript that calls the leaflet functions to create the map, load the grant data, and creates individual markers for each grant point [`basic-map-neh-1960s-leaflet.js`](https://github.com/morskyjezek/neh-grant-data-project/blob/main/grant-mapping-for-web/basic-map-neh-1960s-leaflet.js).
+
+The file opens by calling a function via `window.onload`. This means that each time the window is loaded (or reloaded), the browser will execute the instructions to draw (or redraw) the map.
+
+Next, we create a basemap variable (`var basemap`), which provides information about the underlying map layer. In this case, we draw the tiles from the Open Street Map project and provide attribution.
+
+Then, the `$.getJSON` command loads the geojson data (created previously). Using leaflet’s functions (they are recognizably prepended with `L.`), the file gives instructison for parsing each geojson element into points. The majority of this section is a series of filters that provide information for displaying the text (e.g., how to display the integers as US dollars) or correcting missing information (such as unlisted Institution fields). At the end of this block, in the `layer.bindPopup` statement, a formatted string creates the text of the popup for each grant on the map.
+
+Finally, leaflet is instructed to draw the map. The view is set (zoom level and the latitude and longitude to center the view). And, the basemap and geojson are added as layers to the interactive map.
+
+The next section explains how to use python locally to view (serve) these files and explore the interactive map as it could appear if published to the web.
 
 ```javascript
 window.onload = function () {
