@@ -65,7 +65,9 @@ using python data objects for export into other formats like JSON.
 
 #### 02b. Transforming
 
-Creating a list of coordinate points for displaying on a map. 
+Extracting a list of coordinate points for displaying on a map. 
+This notebook demonstrates a process for geolocating the information
+in the raw grant data from the previous steps.
 
 #### 02c. Exporting
 
@@ -74,7 +76,7 @@ Export the data as well-formed geojson.
 ### 03. Mapping the data
 
 Use the cleaned data to create geospatial visualizations of 
-the grants over time. 
+the grants. 
 
 #### 03a. Mapping state by state 
 
@@ -90,14 +92,18 @@ This would be a proof-of-concept for extension to view by congressional district
 
 #### 03c. Mapping for the web
 
-This notebook walks through a process to geolocate the grants in an
-interactive interface that is browsable via the web.
+Create an interactive, web-based map that will display the grants
+with individual markers on the map, allow a user to zoom and scroll,
+and create a popup for each marker that displays information about the
+grant.
 
 TODO
 
 ### 04. Loading in to cloud provider
 
-Notebook illustrate loading data into AWS.
+This section illustrates loading data into a cloud provider and utilizing
+various services to publish the previously curated data. 
+In this case we use AWS.
 
 #### 04a. Loading JSON into DynamoDB 
 
@@ -107,6 +113,10 @@ Use a notebook to create a table & load in records.
 
 Also demo in notebook.
 
-### 06. Create a twitter broadcaster to share the information
+### 05. Sharing the project
 
-Like the other twitter bots out there. 
+Explore various ways to share the project. 
+
+#### 05a. Create a twitter bot
+
+Create a twitter broadcaster to share the information. Like the other twitter bots out there. 
