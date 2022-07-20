@@ -84,13 +84,13 @@ This notebook walks through a process to geolocate the grants state-by-state.
 The notebook offers tools to filter the data to create different kinds of maps,
 and to export maps to files that can be reused in reports.
 
-#### 03b. An interactive US state map
+#### 03b. An interactive US state map (mapping for the web with python?)
 
-Create a map that shows grants across the country and allows the user to 
+TODO: Create a map that shows grants across the country and allows the user to 
 click &/or hover over each state to see how many grants & funds went to that state.
 This would be a proof-of-concept for extension to view by congressional districts. 
 
-#### 03c. Mapping for the web
+#### 03c. Mapping for the web (with standard web tools like html, css, javascript, and leaflet)
 
 Create an interactive, web-based map that will display the grants
 with individual markers on the map, allow a user to zoom and scroll,
